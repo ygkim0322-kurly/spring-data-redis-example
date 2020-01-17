@@ -11,11 +11,6 @@ import java.util.Collection;
 
 /**
  * 레디스에서 가장 단순한 자료형인 Strings 형식에 대한 예제 서비스
- *
- * @See <a href="https://redis.io/topics/data-types">redis data types</a>
- * @See <a href="https://redis.io/commands/set">redis SET command</a>
- * @See <a href="https://redis.io/commands/get">redis GET command</a>
- * @See <a href="https://redis.io/commands/del">redis DEL command</a>
  */
 @Service
 public class ExampleStringsOperationsService {
@@ -99,6 +94,7 @@ public class ExampleStringsOperationsService {
    * @return 삭제 성공한 데이터 갯수
    */
   public long deleteValueDtoStrings(final Collection<String> keys) {
+
     return customizedValueDtoRedisTemplate.delete(keys);
   }
 }
