@@ -257,7 +257,7 @@ public class ExampleListOperationsService {
   }
 
   /**
-   * List 자료형 내의 값 중, 번지 수 조건에 맞지 않는 값은 섹제하는 메소드
+   * List 자료형 내의 값 중, 번지 수 조건에 맞지 않는 값은 삭제하는 메소드
    * @param key List의 키
    * @param start 번지 수 범위조건 최소값
    * @param end 번지 수 범위조건 최대값
