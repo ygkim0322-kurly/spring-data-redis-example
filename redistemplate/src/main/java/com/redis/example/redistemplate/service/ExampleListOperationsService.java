@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-/** 레디스의 목록형 자료형 중 하나인 Lists 형식에 대한 예제 서비스 */
+/** 레디스의 집합형 자료형 중 하나인 Lists 형식에 대한 예제 서비스 */
 @Service
 public class ExampleListOperationsService {
   @Resource private StringRedisTemplate stringRedisTemplate;
