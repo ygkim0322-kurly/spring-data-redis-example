@@ -146,7 +146,7 @@ public class ExampleHashOperationsService {
   }
 
   /**
-   * Hash 자료형 내, 특정 field 명으로 새로운 값을 삽입하는 매소드. 동일한 field명으로 데이터가 존재할 경우, 새로운 값으로 덮어쓰는 메소드이다.
+   * Hash 자료형 내, 특정 field 명으로 새로운 값을 삽입하는 매소드. 복수의 field - value를 한번에 삽입하며, 동일한 field명으로 데이터가 존재할 경우, 새로운 값으로 덮어쓰는 메소드이다.
    *
    * @param key Hash 자료형의 key
    * @param hashKeysAndValuesMap 삽입할 field name - value 쌍 데이터
