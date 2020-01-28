@@ -61,18 +61,6 @@ public class ExampleHashOperationsService {
   }
 
   /**
-   * Hash 자료형 내에, 특정 조건에 부합하는 데이터를 조건검색 하는 메소드
-   *
-   * @param key Hash 자료형의 key
-   * @param scanOptions 검색을 하기 위한 조건객체
-   * @return 조건에 부합하는 데이터 목록
-   */
-  public Cursor<Map.Entry<String, String>> scan(final String key, final ScanOptions scanOptions) {
-    HashOperations<String, String, String> stringHashOperations = stringRedisTemplate.opsForHash();
-    return stringHashOperations.scan(key, scanOptions);
-  }
-
-  /**
    * Hash 자료형 내, 특정 field 명으로 존재하는 데이터를 조회하는 메소드
    *
    * @param key Hash 자료형의 key
@@ -105,6 +93,18 @@ public class ExampleHashOperationsService {
   public Map<String, String> entries(final String key) {
     HashOperations<String, String, String> stringHashOperations = stringRedisTemplate.opsForHash();
     return stringHashOperations.entries(key);
+  }
+
+  /**
+   * Hash 자료형 내에, 특정 조건에 부합하는 데이터를 조건검색 하는 메소드
+   *
+   * @param key Hash 자료형의 key
+   * @param scanOptions 검색을 하기 위한 조건객체
+   * @return 조건에 부합하는 데이터 목록
+   */
+  public Cursor<Map.Entry<String, String>> scan(final String key, final ScanOptions scanOptions) {
+    HashOperations<String, String, String> stringHashOperations = stringRedisTemplate.opsForHash();
+    return stringHashOperations.scan(key, scanOptions);
   }
 
   /**
