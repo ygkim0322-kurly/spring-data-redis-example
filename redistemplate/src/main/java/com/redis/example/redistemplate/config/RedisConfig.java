@@ -16,8 +16,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * 아래 객체는 기본적으로 RedisAutoConfiguration에서 생성함
  * - redisConnectionFactory
  * - redisTemplate<String,Object>
- * - stringRedisTemplate @See
- * org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+ * - stringRedisTemplate
+ * @See org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
  */
 @Configuration
 public class RedisConfig {
@@ -72,7 +72,4 @@ public class RedisConfig {
     redisTemplate.afterPropertiesSet();
     return redisTemplate;
   }
-
-
-
 }
